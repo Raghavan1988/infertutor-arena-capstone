@@ -1,0 +1,32 @@
+{
+  "config": {
+    "url": "https://raghavan1988--infertutor-smoke-serve.modal.run",
+    "model": "Qwen/Qwen3-VL-4B-Instruct",
+    "mode": "text",
+    "users": 5,
+    "duration": 30,
+    "ramp_up": 5,
+    "max_tokens": 64,
+    "request_timeout": 180,
+    "min_pause": 0.2,
+    "max_pause": 1.2,
+    "label": "smoke",
+    "total_gpus": 1
+  },
+  "results": {
+    "total_requests": 58,
+    "total_errors": 0,
+    "error_rate": 0.0,
+    "total_stream_chunks": 3697,
+    "ttft_p50_ms": 383.58608400449157,
+    "ttft_p95_ms": 611.8751249741763,
+    "ttft_p99_ms": 1940.326540992828,
+    "itl_p50_ms": 19.70932738105249,
+    "itl_p95_ms": 20.094802419114256,
+    "latency_p50_ms": 1623.306166002294,
+    "latency_p95_ms": 1815.9231249883305,
+    "per_request_tps_mean": 38.812658732204525,
+    "aggregate_stream_chunks_per_s": 123.10212587904817,
+    "requests_per_s": 1.9312748988327817
+  }
+}

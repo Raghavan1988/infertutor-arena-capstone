@@ -1,0 +1,32 @@
+{
+  "config": {
+    "url": "https://raghavan1988--infertutor-sweep-400u-serve.modal.run",
+    "model": "Qwen/Qwen3-VL-4B-Instruct",
+    "mode": "text",
+    "users": 400,
+    "duration": 60,
+    "ramp_up": 40,
+    "max_tokens": 96,
+    "request_timeout": 180,
+    "min_pause": 0.2,
+    "max_pause": 1.2,
+    "label": "sweep-400u",
+    "total_gpus": 1
+  },
+  "results": {
+    "total_requests": 373,
+    "total_errors": 0,
+    "error_rate": 0.0,
+    "total_stream_chunks": 35710,
+    "ttft_p50_ms": 372.7597919933032,
+    "ttft_p95_ms": 24853.92879199935,
+    "ttft_p99_ms": 44129.76125002024,
+    "itl_p50_ms": 17.75272325275613,
+    "itl_p95_ms": 28.64072763171096,
+    "latency_p50_ms": 2073.188292008126,
+    "latency_p95_ms": 30354.509208002128,
+    "per_request_tps_mean": 39.325585578133186,
+    "aggregate_stream_chunks_per_s": 594.0667903202885,
+    "requests_per_s": 6.205178179486632
+  }
+}
