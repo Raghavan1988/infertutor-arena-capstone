@@ -1,0 +1,3 @@
+python run_infertutor_experiment.py --label FINAL-mixed --gpu-type H100 \
+  --replicas 1 --no-fast-boot --max-seqs 32 --max-batch-tokens 4096 \
+  --mode mixed --users 50 --duration 180 --ramp-up 30 --max-tokens 96

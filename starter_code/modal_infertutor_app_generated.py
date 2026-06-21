@@ -25,7 +25,7 @@ vllm_image = (
     .env({"HF_XET_HIGH_PERFORMANCE": "1"})
 )
 
-app = modal.App("infertutor-arena")
+app = modal.App("infertutor-FINAL-mixed")
 
 # Persistent caches reduce repeated model download and compilation overhead.
 hf_cache = modal.Volume.from_name("huggingface-cache", create_if_missing=True)
@@ -33,21 +33,21 @@ vllm_cache = modal.Volume.from_name("vllm-cache", create_if_missing=True)
 
 
 # These constants are patched by run_infertutor_experiment.py before deploy.
-MODEL_NAME = os.environ.get("MODEL_NAME", "Qwen/Qwen3-VL-4B-Instruct")
-TENSOR_PARALLEL = int(os.environ.get("TENSOR_PARALLEL", "1"))
-GPU_TYPE = os.environ.get("GPU_TYPE", "H100")
-GPU_COUNT = int(os.environ.get("GPU_COUNT", str(TENSOR_PARALLEL)))
-DTYPE = os.environ.get("DTYPE", "bfloat16")
-ENABLE_PREFIX_CACHING = os.environ.get("ENABLE_PREFIX_CACHING", "true").lower() == "true"
-ENABLE_CHUNKED_PREFILL = os.environ.get("ENABLE_CHUNKED_PREFILL", "true").lower() == "true"
-MAX_MODEL_LEN = int(os.environ.get("MAX_MODEL_LEN", "8192"))
-MAX_NUM_BATCHED_TOKENS = int(os.environ.get("MAX_NUM_BATCHED_TOKENS", "4096"))
-MAX_NUM_SEQS = int(os.environ.get("MAX_NUM_SEQS", "32"))
-CONCURRENT_INPUTS = int(os.environ.get("CONCURRENT_INPUTS", "64"))
-MIN_CONTAINERS = int(os.environ.get("MIN_CONTAINERS", "1"))
-MAX_CONTAINERS = int(os.environ.get("MAX_CONTAINERS", "1"))
-FAST_BOOT = os.environ.get("FAST_BOOT", "true").lower() == "true"
-MM_MAX_PIXELS = int(os.environ.get("MM_MAX_PIXELS", str(512 * 28 * 28)))
+MODEL_NAME = "Qwen/Qwen3-VL-4B-Instruct"
+TENSOR_PARALLEL = 1
+GPU_TYPE = "H100"
+GPU_COUNT = 1
+DTYPE = "bfloat16"
+ENABLE_PREFIX_CACHING = True
+ENABLE_CHUNKED_PREFILL = True
+MAX_MODEL_LEN = 8192
+MAX_NUM_BATCHED_TOKENS = 4096
+MAX_NUM_SEQS = 32
+CONCURRENT_INPUTS = 64
+MIN_CONTAINERS = 1
+MAX_CONTAINERS = 1
+FAST_BOOT = False
+MM_MAX_PIXELS = 401408
 
 MINUTES = 60
 VLLM_PORT = 8000
