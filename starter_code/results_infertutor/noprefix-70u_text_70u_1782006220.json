@@ -1,0 +1,32 @@
+{
+  "config": {
+    "url": "https://raghavan1988--infertutor-noprefix-70u-serve.modal.run",
+    "model": "Qwen/Qwen3-VL-4B-Instruct",
+    "mode": "text",
+    "users": 70,
+    "duration": 60,
+    "ramp_up": 25,
+    "max_tokens": 96,
+    "request_timeout": 180,
+    "min_pause": 0.2,
+    "max_pause": 1.2,
+    "label": "noprefix-70u",
+    "total_gpus": 1
+  },
+  "results": {
+    "total_requests": 553,
+    "total_errors": 0,
+    "error_rate": 0.0,
+    "total_stream_chunks": 52957,
+    "ttft_p50_ms": 1833.8336250162683,
+    "ttft_p95_ms": 4351.863167015836,
+    "ttft_p99_ms": 8809.471540997038,
+    "itl_p50_ms": 20.38311315761683,
+    "itl_p95_ms": 102.65103990524565,
+    "latency_p50_ms": 3878.110582998488,
+    "latency_p95_ms": 15296.757333009737,
+    "per_request_tps_mean": 26.798180049463625,
+    "aggregate_stream_chunks_per_s": 882.0664770959111,
+    "requests_per_s": 9.21092134815112
+  }
+}

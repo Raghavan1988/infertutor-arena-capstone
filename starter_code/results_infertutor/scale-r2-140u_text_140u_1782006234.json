@@ -1,0 +1,32 @@
+{
+  "config": {
+    "url": "https://raghavan1988--infertutor-scale-r2-140u-serve.modal.run",
+    "model": "Qwen/Qwen3-VL-4B-Instruct",
+    "mode": "text",
+    "users": 140,
+    "duration": 60,
+    "ramp_up": 30,
+    "max_tokens": 96,
+    "request_timeout": 180,
+    "min_pause": 0.2,
+    "max_pause": 1.2,
+    "label": "scale-r2-140u",
+    "total_gpus": 2
+  },
+  "results": {
+    "total_requests": 965,
+    "total_errors": 67,
+    "error_rate": 0.0694300518134715,
+    "total_stream_chunks": 85966,
+    "ttft_p50_ms": 1155.538625025656,
+    "ttft_p95_ms": 12428.95783300628,
+    "ttft_p99_ms": 21657.48383299797,
+    "itl_p50_ms": 18.980443420954735,
+    "itl_p95_ms": 39.93850701035147,
+    "latency_p50_ms": 3017.164665972814,
+    "latency_p95_ms": 19665.29587499099,
+    "per_request_tps_mean": 29.917899370338812,
+    "aggregate_stream_chunks_per_s": 1431.0555521643532,
+    "requests_per_s": 16.064125443065873
+  }
+}
